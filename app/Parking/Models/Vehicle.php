@@ -24,4 +24,10 @@ class Vehicle extends \Eloquent {
 		return $this->hasMany('Parking\Models\Payment');
 	}
 
+	// Mutators
+	public function setRentDueAttribute($value)
+	{
+		$this->attributes['rent_due'] = ($value != '') ? Carbon::createFromFormat('d/m/Y', $value) : null;
+	}
+
 }

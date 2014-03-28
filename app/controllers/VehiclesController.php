@@ -79,8 +79,12 @@ class VehiclesController extends BaseController {
 	 */
 	public function show($id)
 	{
-        $vehicle = Vehicle::with('vehicles')->findOrFail($id);
-        return View::make('vehicles.show', compact('vehicle'));
+		$data = array(
+			'vehicle'           =>  Vehicle::findOrFail($id),
+			'customers'           =>  Customer::all()
+		);
+
+		return View::make('vehicles.show', $data);
 	}
 
 	/**
