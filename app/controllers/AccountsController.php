@@ -4,6 +4,12 @@ class AccountsController extends Controller {
 
 	public function index()
 	{
+		$user = new Toddish\Verify\Models\User;
+		$user->username = 'Naven Prasad';
+		$user->email = 'naven@leern.tech';
+		$user->password = 'chelsea26'; // This is automatically salted and encrypted
+		$user->verified = 1;
+		$user->save();
 		if (Auth::user()) {
 			return Redirect::to('dashboard');
 		}

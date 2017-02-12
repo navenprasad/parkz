@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "061e700c8a7057b72914d4cf4c80020c",
-    "content-hash": "e2907653cbc4e9799b2f42b56a9896fe",
+    "hash": "f6d7b6158c693a2ac5c45d6ada1e8134",
+    "content-hash": "724812312808f7fe47ca16b090bec620",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -331,16 +331,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v4.1.31",
+            "version": "v4.1.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "2b092f8d12eb26929687c3ecfb13b626fba6fe6d"
+                "reference": "0888ff0d2b32c51f712187c9382da0a8af2aa2fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/2b092f8d12eb26929687c3ecfb13b626fba6fe6d",
-                "reference": "2b092f8d12eb26929687c3ecfb13b626fba6fe6d",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/0888ff0d2b32c51f712187c9382da0a8af2aa2fd",
+                "reference": "0888ff0d2b32c51f712187c9382da0a8af2aa2fd",
                 "shasum": ""
             },
             "require": {
@@ -356,7 +356,7 @@
                 "phpseclib/phpseclib": "0.3.*",
                 "predis/predis": "0.8.*",
                 "stack/builder": "1.0.*",
-                "swiftmailer/swiftmailer": "~5.0",
+                "swiftmailer/swiftmailer": "5.0.*",
                 "symfony/browser-kit": "2.4.*",
                 "symfony/console": "2.4.*",
                 "symfony/css-selector": "2.4.*",
@@ -367,7 +367,6 @@
                 "symfony/http-kernel": "2.4.*",
                 "symfony/process": "2.4.*",
                 "symfony/routing": "2.4.*",
-                "symfony/security-core": "2.4.*",
                 "symfony/translation": "2.4.*"
             },
             "replace": {
@@ -391,7 +390,6 @@
                 "illuminate/pagination": "self.version",
                 "illuminate/queue": "self.version",
                 "illuminate/redis": "self.version",
-                "illuminate/remote": "self.version",
                 "illuminate/routing": "self.version",
                 "illuminate/session": "self.version",
                 "illuminate/support": "self.version",
@@ -418,7 +416,9 @@
             },
             "autoload": {
                 "classmap": [
-                    "src/Illuminate/Queue/IlluminateQueueClosure.php"
+                    [
+                        "src/Illuminate/Queue/IlluminateQueueClosure.php"
+                    ]
                 ],
                 "files": [
                     "src/Illuminate/Support/helpers.php"
@@ -434,7 +434,9 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
+                    "email": "taylorotwell@gmail.com",
+                    "homepage": "https://github.com/taylorotwell",
+                    "role": "Creator of Laravel"
                 }
             ],
             "description": "The Laravel Framework.",
@@ -442,7 +444,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2014-09-08 18:40:03"
+            "time": "2014-04-15 16:05:47"
         },
         {
             "name": "monolog/monolog",
@@ -955,29 +957,25 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.5",
+            "version": "v5.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "cd142238a339459b10da3d8234220963f392540c"
+                "reference": "32edc3b0de0fdc1b10f5c4912e8677b3f411a230"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/cd142238a339459b10da3d8234220963f392540c",
-                "reference": "cd142238a339459b10da3d8234220963f392540c",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/32edc3b0de0fdc1b10f5c4912e8677b3f411a230",
+                "reference": "32edc3b0de0fdc1b10f5c4912e8677b3f411a230",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9.1",
-                "symfony/phpunit-bridge": "~3.2"
+                "php": ">=5.2.4"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.4-dev"
+                    "dev-master": "5.1-dev"
                 }
             },
             "autoload": {
@@ -991,21 +989,22 @@
             ],
             "authors": [
                 {
-                    "name": "Chris Corbyn"
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "name": "Chris Corbyn"
                 }
             ],
             "description": "Swiftmailer, free feature-rich PHP mailer",
             "homepage": "http://swiftmailer.org",
             "keywords": [
-                "email",
                 "mail",
                 "mailer"
             ],
-            "time": "2016-12-29 10:02:40"
+            "time": "2013-12-03 13:33:24"
         },
         {
             "name": "symfony/browser-kit",
@@ -1670,68 +1669,6 @@
             "time": "2014-09-22 15:28:09"
         },
         {
-            "name": "symfony/security-core",
-            "version": "v2.4.10",
-            "target-dir": "Symfony/Component/Security/Core",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/security-core.git",
-                "reference": "46fe65e1cb18f037c9cd286d8c1bde11ff4b573b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-core/zipball/46fe65e1cb18f037c9cd286d8c1bde11ff4b573b",
-                "reference": "46fe65e1cb18f037c9cd286d8c1bde11ff4b573b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "ircmaxell/password-compat": "1.0.*",
-                "psr/log": "~1.0",
-                "symfony/event-dispatcher": "~2.1",
-                "symfony/expression-language": "~2.4",
-                "symfony/http-foundation": "~2.4",
-                "symfony/validator": "~2.2,<2.5.0"
-            },
-            "suggest": {
-                "ircmaxell/password-compat": "For using the BCrypt password encoder in PHP <5.5",
-                "symfony/event-dispatcher": "",
-                "symfony/expression-language": "For using the expression voter",
-                "symfony/http-foundation": "",
-                "symfony/validator": "For using the user password constraint"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Component\\Security\\Core\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Symfony Security Component - Core Library",
-            "homepage": "http://symfony.com",
-            "time": "2014-09-27 20:16:29"
-        },
-        {
             "name": "symfony/translation",
             "version": "v2.4.10",
             "target-dir": "Symfony/Component/Translation",
@@ -1789,16 +1726,16 @@
         },
         {
             "name": "toddish/verify",
-            "version": "v2.3.1",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Toddish/Verify-L4.git",
-                "reference": "b3025c72bdf4e0f33aa0781ac8eab2053729c5dd"
+                "reference": "8e4e23fbb34b4eb87cf9ae1a23702afe25e65dd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Toddish/Verify-L4/zipball/b3025c72bdf4e0f33aa0781ac8eab2053729c5dd",
-                "reference": "b3025c72bdf4e0f33aa0781ac8eab2053729c5dd",
+                "url": "https://api.github.com/repos/Toddish/Verify-L4/zipball/8e4e23fbb34b4eb87cf9ae1a23702afe25e65dd9",
+                "reference": "8e4e23fbb34b4eb87cf9ae1a23702afe25e65dd9",
                 "shasum": ""
             },
             "require": {
@@ -1834,7 +1771,7 @@
                 "roles",
                 "verify"
             ],
-            "time": "2014-02-24 13:14:57"
+            "time": "2014-04-21 18:31:12"
         },
         {
             "name": "way/generators",

@@ -1,5 +1,5 @@
 <?php
-App::setLocale('es');
+App::setLocale('en');
 /*
  * ANONYMOUS PAGES
  */
