@@ -23,8 +23,8 @@ Route::group(array('before' => 'auth'), function () {
 		->where('user_id', '[0-9]+');
 	Route::resource('customers', 'CustomersController');
 
-	// SPOTS
-	Route::resource('spots', 'SpotsController');
+	// Places
+	Route::resource('spots', 'PlacesController');
 
 	// VEHICLE TYPES
 	Route::get('vehicle_types/{vehicle_type_id}/delete', array('as'=>'vehicle_types.delete', 'uses'=>'VehicleTypesController@delete'))
@@ -36,4 +36,13 @@ Route::group(array('before' => 'auth'), function () {
 	Route::get('vehicles/{vehicle_id}/delete', array('as'=>'vehicles.delete', 'uses'=>'VehiclesController@delete'))
 		->where('vehicle_id', '[0-9]+');
 	Route::resource('vehicles', 'VehiclesController');
+
+	/*
+     | Sign Out (GET)
+     | --
+     */
+    Route::get('/account/sign-out', array(
+        'as' => 'account-sign-out',
+        'uses' => 'AccountsController@getSignOut'
+    ));
 });

@@ -11,7 +11,8 @@
 		"way/generators": "1.1",
 		"toddish/verify": "2.4.0",
 		"edvinaskrucas/notification": "2.0.1",
-		"fzaninotto/faker": "1.4.*@dev"
+		"fzaninotto/faker": "1.4.*@dev",
+		"jwage/easy-csv": "^0.0.3"
 	},
 	"autoload": {
 		"classmap": [

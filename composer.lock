@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f6d7b6158c693a2ac5c45d6ada1e8134",
-    "content-hash": "724812312808f7fe47ca16b090bec620",
+    "hash": "68a2af8f089a43c46afd4ff8fef6941e",
+    "content-hash": "3b0a7ba9d1fb782e782080ab942d167b",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -328,6 +328,53 @@
                 "tokenizer"
             ],
             "time": "2015-01-10 01:09:28"
+        },
+        {
+            "name": "jwage/easy-csv",
+            "version": "0.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jwage/easy-csv.git",
+                "reference": "5ba994c332e3dec0e26e1d39789beaf8e2552a1e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jwage/easy-csv/zipball/5ba994c332e3dec0e26e1d39789beaf8e2552a1e",
+                "reference": "5ba994c332e3dec0e26e1d39789beaf8e2552a1e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "EasyCSV": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan H. Wage",
+                    "email": "jonwage@gmail.com"
+                }
+            ],
+            "description": "Easy CSV manipulation for PHP 5.4+",
+            "homepage": "http://github.com/jwage/easy-csv",
+            "keywords": [
+                "csv",
+                "read",
+                "write"
+            ],
+            "time": "2015-07-16 20:24:42"
         },
         {
             "name": "laravel/framework",

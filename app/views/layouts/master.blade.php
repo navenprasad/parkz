@@ -8,10 +8,10 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>@yield('title') - Parking System</title>
+    <title>@yield('title') - Parkz | Cloud Based Parking Manager</title>
 
     <!-- Custom styles for this template -->
-    {{ HTML::style('assets/css/parking.css?v=' . filemtime('assets/css/parking.css')) }}
+     <link rel="stylesheet" href="assets/css/parking.css">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -31,21 +31,22 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ route('home') }}">Parking System</a>
+            <a class="navbar-brand" href="{{ route('home') }}">Parkz | Cloud Based Parking Management</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li>{{ link_to_route('customers.index', 'Clientes') }}</li>
-                <li>{{ link_to_route('vehicles.index', 'Vehiculos') }}</li>
+                <li>{{ link_to_route('customers.index', 'Clients') }}</li>
+                <li>{{ link_to_route('vehicles.index', 'Vehicles') }}</li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Configuraciones <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Configurations <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li>{{ link_to_route('vehicle_types.index', 'Tipos de vehiculos') }}</li>
+                        <li>{{ link_to_route('vehicle_types.index', 'Types of Vehicles') }}</li>
                     </ul>
                 </li>
 
-                <li><a href="#">Perfil</a></li>
-                <li><a href="#">Salir</a></li>
+                <li><a href="{{ URL::route('account-sign-out') }}">Sign Out</a></li>
+
+                
             </ul>
         </div>
     </div>
@@ -64,5 +65,6 @@
 {{ HTML::script('assets/js/vendor/jquery-1.11.0.min.js') }}
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 {{ HTML::script('assets/js/vendor/bootstrap.min.js') }}
+
 </body>
 </html>

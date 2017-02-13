@@ -1,6 +1,7 @@
 <?php
+use Parking\Models\Place;
 
-class SpotsController extends BaseController {
+class PlacesController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +10,28 @@ class SpotsController extends BaseController {
 	 */
 	public function index()
 	{
-        return View::make('spots.index');
+
+		$places = Place::with('vehicles');
+
+        // Search by type OR keyword
+        if( Input::has('keywords') ) {
+
+            $places->where(function($q) {
+
+                $q->orWhere(function($query) {
+                    $query->where('id','like','%' . Input::get('keywords') .'%')
+                        ->orWhere('vehicle_type_id','like','%' . Input::get('keywords') .'%')
+                        ->orWhere('description','like','%' . Input::get('keywords') .'%');
+                });
+            });
+        }
+
+        $places->orderBy('created_at','desc');
+
+        $data = array(
+            'places' => $places->paginate(10)
+        );
+        return View::make('place.index');
 	}
 
 	/**

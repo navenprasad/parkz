@@ -47,7 +47,8 @@ class VehiclesController extends BaseController {
 	{
         $data = array(
             'vehicle'   =>  new Vehicle(),
-            'customers'   =>  Customer::all()
+            'customers'   =>  Customer::all(),
+            'vehicle_type'   =>  VehicleType::all()
         );
 
         return View::make('vehicles.form', $data);

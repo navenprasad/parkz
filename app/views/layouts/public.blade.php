@@ -24,14 +24,21 @@
 
 <body>
 
-<div class="container-fluid">
+<div class="container">
+<div class="col-xs-6">
+<h1>Welcome to Parkz!</h1>
+<h2>The cloud based parking management system.</h2>
+</div>
+<div class="col-xs-6">
 
 	@yield('content')
 
-	<hr>
+	
+</div>
+<hr>
 
 	<footer>
-		<p>&copy; Parking Manager System 2014</p>
+		<p>&copy; Made for Web Techniques and Applications, February 2017</p>
 	</footer>
 
 </div><!--/.container-->

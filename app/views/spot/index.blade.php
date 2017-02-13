@@ -9,8 +9,8 @@ List of Clients
 <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-12">
         <div class="page-header">
-            <p class="pull-right"><a href="{{ route('customers.create') }}" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> New Client</a></p>
-            <h2>Clients</h2>
+            <p class="pull-right"><a href="{{ route('place.create') }}" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> New Client</a></p>
+            <h2>Spots</h2>
         </div>
 
         {{ Form::open(array('method'=>'get','class'=>'form-inline well well-small')) }}
@@ -21,10 +21,10 @@ List of Clients
         </div>
 
         <button type="submit" class="btn">Go</button>
-        {{ link_to_route('customers.index', 'Filter', array(), array('class'=>'btn btn-warning')) }}
+        {{ link_to_route('place.index', 'Filter', array(), array('class'=>'btn btn-warning')) }}
 
         <div class="pull-right">
-            {{ link_to_route('customers.export', 'Export to CSV', Input::all(), array('class'=>'btn btn-success')) }}
+            {{ link_to_route('place.export', 'Export to CSV', Input::all(), array('class'=>'btn btn-success')) }}
         </div>
 
         {{Form::close()}}
@@ -32,7 +32,7 @@ List of Clients
 </div>
 
 <div class="row">
-    <p>Showing: {{ $customers->getTotal() }} client(s)</p>
+    <p>Showing: {{ $place->getTotal() }} client(s)</p>
     <div class="col-xs-12 col-sm-6 col-md-12">
         <div class="table-responsive">
             <table class="table table-striped">
@@ -49,18 +49,18 @@ List of Clients
                 </tr>
                 </thead>
 
-                @if ($customers->count())
+                @if ($place->count())
                 <tbody>
-                @foreach($customers as $customer)
+                @foreach($place as $place)
                 <tr>
-                    <td>{{ $customer->id }}</td>
-                    <td>{{ $customer->last_name }}</td>
-	                <td>{{ $customer->name }}</td>
-                    <td>{{ $customer->street_name }} {{ $customer->street_number }}</td>
-                    <td>{{ $customer->home_phone }}</td>
-                    <td>{{ $customer->mobile_phone }}</td>
-                    <td>{{ $customer->vehicles->count() }}</td>
-                    <td><a href="{{ route('customers.show', $customer->id) }}" title="Ver Detalles"><i class="fa fa-eye"></i></a> - <a href="{{ route('customers.edit', $customer->id) }}" title="Editar"><i class="fa fa-pencil-square-o"></i></a> - <a href="{{ route('customers.delete', $customer->id) }}" title="Eliminar"><i class="fa fa-ban"></i></a></td>
+                    <td>{{ $place->id }}</td>
+                    <td>{{ $place->last_name }}</td>
+	                <td>{{ $place->name }}</td>
+                    <td>{{ $place->street_name }} {{ $place->street_number }}</td>
+                    <td>{{ $place->home_phone }}</td>
+                    <td>{{ $place->mobile_phone }}</td>
+                    <td>{{ $place->vehicles->count() }}</td>
+                    <td><a href="{{ route('place.show', $place->id) }}" title="Ver Detalles"><i class="fa fa-eye"></i></a> - <a href="{{ route('place.edit', $place->id) }}" title="Editar"><i class="fa fa-pencil-square-o"></i></a> - <a href="{{ route('place.delete', $place->id) }}" title="Eliminar"><i class="fa fa-ban"></i></a></td>
                 </tr>
                 @endforeach
                 @else
@@ -71,7 +71,7 @@ List of Clients
                 </tbody>
             </table>
         </div>
-        {{ $customers->links() }}
+        {{ $place->links() }}
     </div>
 </div><!-- End: .row -->
 

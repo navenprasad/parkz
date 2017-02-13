@@ -36,21 +36,7 @@
             <div class="form-group">
                 {{ Form::label('vehicle_type_id', 'Vehicle Type', array('class' => 'col-md-2 control-label')) }}
                 <div class="col-md-10">
-                    {{ Form::select('vehicle_type_id', array(''=>'-- Select a Type --')+$vehicle_types->lists('name','id'), null, array('class' => 'form-control', 'placeholder' => 'ej: Juan')) }}
-                </div>
-            </div>
-
-            <div class="form-group">
-                {{ Form::label('place_id', 'Place', array('class' => 'col-md-2 control-label')) }}
-                <div class="col-md-10">
-                    {{ Form::select('place_id', array(''=>'-- Select a Place --')+$places, null, array('class' => 'form-control', 'placeholder' => 'ej: Juan')) }}
-                </div>
-            </div>
-
-            <div class="form-group">
-                {{ Form::label('name', 'First name', array('class' => 'col-md-2 control-label')) }}
-                <div class="col-md-10">
-                    {{ Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'ej: Juan')) }}
+                    {{ Form::select('vehicle_type_id', array(''=>'-- Select a Type --')+$vehicle_type->lists('name','id'), null, array('class' => 'form-control', 'placeholder' => 'ej: Juan')) }}
                 </div>
             </div>
 

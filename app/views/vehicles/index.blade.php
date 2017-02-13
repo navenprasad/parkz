@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-Listado de Vehículos
+List of Vehicles
 @stop
 
 @section('content')
@@ -9,22 +9,22 @@ Listado de Vehículos
 <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-12">
         <div class="page-header">
-            <p class="pull-right"><a href="{{ route('vehicles.create') }}" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> Crear Vehículo</a></p>
-            <h2>Vehículos</h2>
+            <p class="pull-right"><a href="{{ route('vehicles.create') }}" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> New Vehicle</a></p>
+            <h2>Vehicles</h2>
         </div>
 
         {{ Form::open(array('method'=>'get','class'=>'form-inline well well-small')) }}
 
 	    <div class="form-group">
-		    {{ Form::label('keywords', 'Buscar:') }}
-		    {{ Form::text('keywords', Input::get('keywords',null), array('class'=>'lg-inline-input form-control', 'placeholder'=>'Marca, modelo, color o patente...')) }}
+		    {{ Form::label('keywords', 'Search:') }}
+		    {{ Form::text('keywords', Input::get('keywords',null), array('class'=>'lg-inline-input form-control', 'placeholder'=>'Model, licence plate, owner...')) }}
 	    </div>
 
 	    <button type="submit" class="btn">Go</button>
-	    {{ link_to_route('customers.index', 'Limpiar filtros', array(), array('class'=>'btn btn-warning')) }}
+	    {{ link_to_route('customers.index', 'Reset Filter', array(), array('class'=>'btn btn-warning')) }}
 
 	    <div class="pull-right">
-		    {{ link_to_route('customers.export', 'Exportar a CSV', Input::all(), array('class'=>'btn btn-success')) }}
+		    {{ link_to_route('customers.export', 'Export to CSV', Input::all(), array('class'=>'btn btn-success')) }}
 	    </div>
 
         {{Form::close()}}
@@ -39,16 +39,16 @@ Listado de Vehículos
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Dueño</th>
-                    <th>Tipo</th>
+                    <th>Owner</th>
+                    <th>Type</th>
                     <th>Lugar</th>
-                    <th>Marca</th>
-                    <th>Modelo</th>
+                    <th>Brand</th>
+                    <th>MyVi</th>
                     <th>Color</th>
-                    <th>Patente</th>
-                    <th>Precio de renta</th>
-                    <th>Vencimiento</th>
-                    <th>Acciones</th>
+                    <th>Lincense Plate</th>
+                    <th>Price</th>
+                    <th>Due Date</th>
+                    <th>Actions</th>
                 </tr>
                 </thead>
 
