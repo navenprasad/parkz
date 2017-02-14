@@ -58,16 +58,9 @@ List of Spots
                     <td>{{ $spot->vehicle->model }}</td>           
                     <td>{{ $spot->vehicle->license_plate}}</td>
                      <td>{{ $spot->vehicle->color}}</td>
-                    @if ($is_due >= $spot->vehicle->rent_due)
-                    <td>{{'YES' }}</td>
-                    @else
-                    <td>{{ 'NO' }}</td>
-                    {{ $is_due }}
-                    @endif
-                    {{ print_r($is_due)}}
+                     <td>{{ $spot->vehicle->rent_due}}</td>
 
-
-
+                    
                 </tr>
                 @endif
                 @endforeach

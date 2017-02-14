@@ -32,9 +32,9 @@
 		    </div>
 
             <div class="form-group">
-                {{ Form::label('vehicles', 'Vehicles', array('class' => 'col-md-2 control-label')) }}
+                {{ Form::label('vehicle_id', 'Vehicle', array('class' => 'col-md-2 control-label')) }}
                 <div class="col-md-10">
-                    {{ Form::select('vehicle', array(''=>'-- Select a Type --')+$vehicles->lists('license_plate'), null, array('class' => 'form-control', 'placeholder' => 'ej: Juan')) }}
+                    {{ Form::select('vehicle_id', array(''=>'-- Select a Type --')+$vehicles->lists('id'), null, array('class' => 'form-control', 'placeholder' => 'ej: Juan')) }}
                 </div>
             </div>
 
