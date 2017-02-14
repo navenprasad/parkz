@@ -25,11 +25,11 @@
 <body>
 
 <div class="container">
-<div class="col-xs-6">
+<div class="col-xs-12 col-lg-6">
 <h1>Welcome to Parkz!</h1>
 <h2>The cloud based parking management system.</h2>
 </div>
-<div class="col-xs-6">
+<div class="col-xs-12 col-lg-6">
 
 	@yield('content')
 

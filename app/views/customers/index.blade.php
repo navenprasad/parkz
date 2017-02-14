@@ -21,7 +21,7 @@ List of Clients
         </div>
 
         <button type="submit" class="btn">Go</button>
-        {{ link_to_route('customers.index', 'Filter', array(), array('class'=>'btn btn-warning')) }}
+        {{ link_to_route('customers.index', 'Reset Filter', array(), array('class'=>'btn btn-warning')) }}
 
         <div class="pull-right">
             {{ link_to_route('customers.export', 'Export to CSV', Input::all(), array('class'=>'btn btn-success')) }}

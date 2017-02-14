@@ -1,8 +1,27 @@
 <?php namespace Parking\Models;
+use Carbon/Carbon;
 
 class Vehicle extends \Eloquent {
 
 	protected $softDelete = true;
+
+	protected $fillable = array(
+        'id',
+        'customer_id',
+        'vehicle_type_id',
+        'brand',
+        'model',
+        'color',
+        'license_plate',
+        'price',
+        'rent_due',
+        'created_at',
+        'updated_at'
+    );
+
+	public static $rules = array(
+        'license_plate'          =>  'required|max:25'
+    );
 
 	public function customer()
 	{

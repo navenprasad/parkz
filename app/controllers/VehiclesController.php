@@ -2,7 +2,8 @@
 use Parking\Models\Vehicle;
 use Parking\Models\VehicleType;
 use Parking\Models\Customer;
-use Parking\Models\Place;
+use Parking\Models\Spot;
+
 
 class VehiclesController extends BaseController {
 
@@ -45,11 +46,14 @@ class VehiclesController extends BaseController {
 	 */
 	public function create()
 	{
+  
         $data = array(
             'vehicle'   =>  new Vehicle(),
             'customers'   =>  Customer::all(),
             'vehicle_type'   =>  VehicleType::all()
         );
+
+     
 
         return View::make('vehicles.form', $data);
 	}
@@ -62,7 +66,6 @@ class VehiclesController extends BaseController {
 	public function store()
 	{
         $input = Input::all();
-        return $input;
 
         $validation = Validator::make($input, Vehicle::$rules);
 
@@ -99,19 +102,19 @@ class VehiclesController extends BaseController {
         $data = array(
             'vehicle'           =>  Vehicle::findOrFail($id),
             'customers'           =>  Customer::all(),
-            'places'            =>  Place::where('available', 1)->get(),
+            'spots'            =>  Spot::where('available', 1)->get(),
             'vehicle_types'     =>  VehicleType::all()
         );
-        $places = DB::table('vehicle_types')
+        $spots = DB::table('vehicle_types')
             ->whereExists(function($query)
             {
                 $query->select(DB::raw(1))
-                    ->from('places')
-                    ->whereRaw('places.vehicle_type_id = vehicle_types.id');
+                    ->from('spots')
+                    ->whereRaw('spots.vehicle_type_id = vehicle_types.id');
             })
             ->get();
 
-        return $places;
+        return $spots;
         return View::make('vehicles.form', $data);
 	}
 

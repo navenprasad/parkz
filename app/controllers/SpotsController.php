@@ -1,5 +1,6 @@
 <?php
 use Parking\Models\Spot;
+use Parking\Models\Vehicle;
 
 class SpotsController extends BaseController {
 
@@ -12,9 +13,22 @@ class SpotsController extends BaseController {
 	{
 
 		$spots = Spot::with('vehicle');
+		$is_due = getdate();
+
+		if( Input::has('keywords') ) {
+
+            $spots->where(function($q) {
+
+                $q->orWhere(function($query) {
+                    $query->where('description','like','%' . Input::get('keywords') .'%');
+                });
+            });
+        }
 
 		$data = array(
-            'spots' => $spots->paginate(10)
+            'spots' => $spots->paginate(10),
+			'is_due' => $is_due
+			
         );
 
         return View::make('spots.index', $data);
@@ -27,7 +41,14 @@ class SpotsController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('spots.create');
+		$data = array(
+			'spot'   =>  new Spot(),
+            'available_spots'   => Spot::where('available',0)->get(),
+			'taken_spots'   => Spot::where('available',1)->get(),
+            'vehicles'   =>  Vehicle::all()
+        );
+
+        return View::make('spots.form', $data);
 	}
 
 	/**

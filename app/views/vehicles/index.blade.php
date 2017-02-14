@@ -41,7 +41,7 @@ List of Vehicles
                     <th>#</th>
                     <th>Owner</th>
                     <th>Type</th>
-                    <th>Lugar</th>
+                    <th>Spot</th>
                     <th>Brand</th>
                     <th>MyVi</th>
                     <th>Color</th>

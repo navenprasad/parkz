@@ -12,7 +12,8 @@
 		"toddish/verify": "2.4.0",
 		"edvinaskrucas/notification": "2.0.1",
 		"fzaninotto/faker": "1.4.*@dev",
-		"jwage/easy-csv": "^0.0.3"
+		"jwage/easy-csv": "^0.0.3",
+		"nesbot/carbon": "~1.21"
 	},
 	"autoload": {
 		"classmap": [
@@ -26,7 +27,8 @@
 			"app/Parking/Models/Spot.php",
 			"app/Parking/Models/Customer.php",
 			"app/Parking/Models/Vehicle.php",
-			"app/Parking/Models/VehicleType.php"
+			"app/Parking/Models/VehicleType.php",
+			"app/Parking/Models/Carbon.php"
 
 		]
 	},

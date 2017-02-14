@@ -23,7 +23,7 @@ Route::group(array('before' => 'auth'), function () {
 		->where('user_id', '[0-9]+');
 	Route::resource('customers', 'CustomersController');
 
-	// Places
+	// Spots
 	Route::resource('spots', 'SpotsController');
 
 	// VEHICLE TYPES
