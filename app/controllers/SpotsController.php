@@ -1,7 +1,7 @@
 <?php
 use Parking\Models\Place;
 
-class PlacesController extends BaseController {
+class SpotController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -11,7 +11,7 @@ class PlacesController extends BaseController {
 	public function index()
 	{
 
-		$places = Place::with('vehicles');
+		$spots = Spot::with('vehicles');
 
         // Search by type OR keyword
         if( Input::has('keywords') ) {
@@ -26,12 +26,12 @@ class PlacesController extends BaseController {
             });
         }
 
-        $places->orderBy('created_at','desc');
+        $spots->orderBy('created_at','desc');
 
         $data = array(
-            'places' => $places->paginate(10)
+            'spots' => $spots->paginate(10)
         );
-        return View::make('place.index');
+        return View::make('spot.index');
 	}
 
 	/**

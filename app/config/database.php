@@ -48,10 +48,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => $_ENV['DB_HOST'],
-			'database'  => $_ENV['DB_NAME'],
-			'username'  => $_ENV['DB_USERNAME'],
-			'password'  => $_ENV['DB_PASSWORD'],
+			'host'      => 'o61qijqeuqnj9chh.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+			'database'  => 'hrzhjmx4oc2epp5s',
+			'username'  => 'rfwomtjysylpka75',
+			'password'  => 'eb3udt3lwro68hb3',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

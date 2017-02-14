@@ -1,6 +1,6 @@
 <?php namespace Parking\Models;
 
-class Place extends \Eloquent {
+class Spot extends \Eloquent {
 
 	public function vechicleType()
 	{
