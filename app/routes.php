@@ -24,7 +24,7 @@ Route::group(array('before' => 'auth'), function () {
 	Route::resource('customers', 'CustomersController');
 
 	// Places
-	Route::resource('spots', 'PlacesController');
+	Route::resource('spots', 'SpotsController');
 
 	// VEHICLE TYPES
 	Route::get('vehicle_types/{vehicle_type_id}/delete', array('as'=>'vehicle_types.delete', 'uses'=>'VehicleTypesController@delete'))

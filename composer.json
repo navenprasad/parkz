@@ -23,7 +23,7 @@
 			"app/tests/TestCase.php",
 			"app/Parking/Models/User.php",
 			"app/Parking/Models/Payment.php",
-			"app/Parking/Models/Place.php",
+			"app/Parking/Models/Spot.php",
 			"app/Parking/Models/Customer.php",
 			"app/Parking/Models/Vehicle.php",
 			"app/Parking/Models/VehicleType.php"

@@ -1,7 +1,7 @@
 <?php
 use Parking\Models\Spot;
 
-class SpotController extends BaseController {
+class SpotsController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -11,27 +11,13 @@ class SpotController extends BaseController {
 	public function index()
 	{
 
-		$spots = Spot::with('vehicles');
+		$spots = Spot::with('vehicle');
 
-        // Search by type OR keyword
-        if( Input::has('keywords') ) {
-
-            $places->where(function($q) {
-
-                $q->orWhere(function($query) {
-                    $query->where('id','like','%' . Input::get('keywords') .'%')
-                        ->orWhere('vehicle_type_id','like','%' . Input::get('keywords') .'%')
-                        ->orWhere('description','like','%' . Input::get('keywords') .'%');
-                });
-            });
-        }
-
-        $spots->orderBy('created_at','desc');
-
-        $data = array(
+		$data = array(
             'spots' => $spots->paginate(10)
         );
-        return View::make('spot.index');
+
+        return View::make('spots.index', $data);
 	}
 
 	/**
