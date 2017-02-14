@@ -1,5 +1,5 @@
 <?php namespace Parking\Models;
-use Carbon/Carbon;
+use Carbon\Carbon;
 
 class Vehicle extends \Eloquent {
 
@@ -46,7 +46,7 @@ class Vehicle extends \Eloquent {
 	// Mutators
 	public function setRentDueAttribute($value)
 	{
-		$this->attributes['rent_due'] = ($value != '') ? Carbon::createFromFormat('d/m/Y', $value) : null;
+		$this->attributes['rent_due'] = ($value != '') ? Carbon::createFromFormat('Y-m-d', $value) : null;
 	}
 
 }

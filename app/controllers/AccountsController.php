@@ -6,8 +6,8 @@ class AccountsController extends Controller {
 	{
 		$user = new Toddish\Verify\Models\User;
 		$user->username = 'Naven Prasad';
-		$user->email = 'naven@leern.tech';
-		$user->password = 'chelsea26'; // This is automatically salted and encrypted
+		$user->email = 'admin@parkz.com';
+		$user->password = '12345678'; // This is automatically salted and encrypted
 		$user->verified = 1;
 		$user->save();
 		if (Auth::user()) {

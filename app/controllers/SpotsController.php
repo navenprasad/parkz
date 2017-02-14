@@ -41,12 +41,13 @@ class SpotsController extends BaseController {
 	 */
 	public function create()
 	{
-		$data = array(
-			'spot'   =>  new Spot(),
-            'available_spots'   => Spot::where('available',0)->get(),
-			'taken_spots'   => Spot::where('available',1)->get(),
+		 $data = array(
+            'spot'   =>  new Spot(),
             'vehicles'   =>  Vehicle::all()
         );
+
+     
+
 
         return View::make('spots.form', $data);
 	}
@@ -58,7 +59,15 @@ class SpotsController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+
+        $validation = Validator::make($input, Spot::$rules);
+
+        if ($validation->fails()) return Redirect::back()->withErrors($validation)->withInput();
+
+        $spot = Spot::create($input);
+        return Redirect::route('spots.index');
+		
 	}
 
 	/**
