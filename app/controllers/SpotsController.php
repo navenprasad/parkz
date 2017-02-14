@@ -1,5 +1,5 @@
 <?php
-use Parking\Models\Place;
+use Parking\Models\Spot;
 
 class SpotController extends BaseController {
 
