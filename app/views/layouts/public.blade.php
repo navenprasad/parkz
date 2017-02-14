@@ -7,7 +7,7 @@
 
 	<title>Parking Manager System</title>
 
-	<link href="{{ asset('assets/css/parking.css') }}" rel="stylesheet">
+	<link href="https://parkzdev.herokuapp.com/assets/css/parking.css" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
